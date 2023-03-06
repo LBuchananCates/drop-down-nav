@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+.column-container {
+  display: flex;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-logos {
+  margin: 0 auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+.learn-more-btn {
+  font-family: "Epilogue", sans-serif;
+}

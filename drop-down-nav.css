@@ -4,10 +4,36 @@
 
 body {
   font-family: "Epilogue", sans-serif;
+  margin: 0;
+}
+
+.snap-logo {
+  width: 24%;
+}
+
+.menu-icon {
+  width: 12%; /* fix width and height so adjusts to screen size*/
+}
+
+.nav-bar-desktop {
+  display: none;
+}
+
+.left-nav-desktop {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar-mobile {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .column-container {
   display: flex;
+  flex-direction: column-reverse;
 }
 
 .left-column {
@@ -16,14 +42,131 @@ body {
   align-items: center;
 }
 
-.client-logos {
-  margin: 0 auto;
+.header-title {
+  font-size: xxx-large;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-p {
+.intro-slogan {
+  display: flex;
+  color: hsl(0, 0%, 41%);
   font-size: 18px;
+  padding: 20px;
+  line-height: 1.5em;
+  text-align: center;
 }
 
 .learn-more-btn {
   font-family: "Epilogue", sans-serif;
+  background-color: black;
+  border: solid 1px black;
+  color: white;
+  border-radius: 20px;
+  padding: 25px 45px;
+  font-size: x-large;
+}
+
+.clients {
+  width: 100%;
+  padding: 50px 0px;
+  display: inline-block;
+  text-align: center;
+}
+
+.client-logos {
+}
+
+.right-column .mobile-hero-img {
+  width: 100%;
+}
+
+.desktop-hero-img {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .nav-bar-desktop {
+    display: inline-flex;
+    color: hsl(0, 0%, 41%);
+  }
+
+  .right-nav-desktop {
+    display: inline;
+  }
+
+  .nav-bar-mobile {
+    display: none;
+  }
+
+  .features-dropdown:hover,
+  .company-dropdown:hover {
+    cursor: pointer;
+  }
+
+  .login:hover {
+    cursor: pointer;
+    color: black;
+  }
+
+  .register:hover {
+    color: black;
+    border: solid 1px black;
+  }
+
+  .register {
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .column-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-column {
+    justify-content: center;
+  }
+
+  .arrow-down-icon {
+    width: 40px;
+    height: 30px;
+  }
+
+  .login {
+    color: hsl(0, 0%, 41%);
+  }
+
+  .register {
+    color: hsl(0, 0%, 41%);
+    border: solid 1px hsl(0, 0%, 41%);
+  }
+
+  .header-title {
+    font-size: xxx-large;
+  }
+
+  .intro-slogan {
+    padding: 90px;
+    display: flex;
+    align-content: center;
+    text-align: left;
+  }
+
+  .right-column .mobile-hero-img {
+    display: none;
+  }
+
+  .desktop-hero-img {
+    display: flex;
+    width: 100%;
+  }
+
+  .learn-more-btn:hover {
+    cursor: pointer;
+    border: solid 1px black;
+    background-color: white;
+    color: black;
+  }
 }

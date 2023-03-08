@@ -32,9 +32,10 @@ body {
   display: flex;
 }
 
+/* upper right corner of open menu X */
 .close-menu-icon {
   position: absolute;
-  right: 20px;
+  right: 15px;
 }
 
 /* click on menu button, opens */
@@ -43,36 +44,35 @@ body {
   flex-direction: column;
 }
 
+/* entire container of menu */
 .mobile-menu {
   display: flex;
   flex-direction: column;
   color: hsl(0, 0%, 41%);
-  margin: 30px;
-}
-
-.features-dropdown,
-.company-dropdown {
-  border: none;
   background-color: white;
-  color: hsl(0, 0%, 41%);
-  font-family: "Epilogue", sans-serif;
-  font-size: 18px;
-  text-align: left;
-  margin: 20px 0px 20px -30px;
+  position: absolute;
+  right: -300px;
+  padding: 25px;
+  transition: margin-right 0.65s;
 }
 
-.careers,
-.about {
-  border: none;
-  background-color: white;
-  color: hsl(0, 0%, 41%);
-  font-family: "Epilogue", sans-serif;
-  font-size: 18px;
-  text-align: left;
-  margin: 20px 0px 0px -30px;
+.mobile-menu:hover {
+  margin-right: 310px;
 }
 
+/* features, company, careers, about*/
 .mobile-menu-items {
+  border: none;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  margin: 17px 0px 20px 0px;
+}
+
+/* features dropdown, company dropdown */
+.mobile-menu-sub-items {
   margin: 10px 20px;
 }
 
@@ -85,6 +85,7 @@ body {
   display: flex;
   flex-direction: column;
   color: hsl(0, 0%, 41%);
+  margin-left: 15px;
 }
 
 /* links styles */
@@ -96,7 +97,7 @@ body {
 .login-and-register-buttons {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding: 0px 35px;
 }
 
 .login {
@@ -114,9 +115,9 @@ body {
   background-color: white;
   color: hsl(0, 0%, 41%);
   border: solid 1px black;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 5px 0px;
+  margin: 10px 0px;
+  border-radius: 15px;
+  padding: 15px 65px;
 }
 
 /* desktop style: OFF */
@@ -153,7 +154,7 @@ body {
 .header-title {
   font-size: xxx-large;
   overflow: hidden;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .intro-slogan {
@@ -176,9 +177,10 @@ body {
 }
 
 .clients {
+  display: inline-flex;
+  justify-content: space-around;
   width: 100%;
   padding: 50px 0px;
-  display: inline-block;
   text-align: center;
 }
 
@@ -189,6 +191,18 @@ body {
 
 .desktop-hero-img {
   display: none;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  transition: background-color 0.5s 1s;
+}
+
+.circle:hover {
+  background-color: cyan;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 1440px) {

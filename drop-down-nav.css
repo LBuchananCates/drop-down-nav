@@ -14,8 +14,8 @@ body {
 
 /* MENU ICON */
 .menu-icon {
-  width: 12%; /* fix width and height so adjusts to screen size*/
-  display: block;
+  position: absolute;
+  right: 20px;
 }
 
 .menu-icon:hover {
@@ -27,20 +27,96 @@ body {
   display: none;
 }
 
+/* close menu slider */
+.close-menu-slider {
+  display: flex;
+}
+
+.close-menu-icon {
+  position: absolute;
+  right: 20px;
+}
+
 /* click on menu button, opens */
 .open-mobile-menu {
   display: flex;
   flex-direction: column;
 }
 
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 41%);
+  margin: 30px;
+}
+
+.features-dropdown,
+.company-dropdown {
+  border: none;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  margin: 20px 0px 20px -30px;
+}
+
+.careers,
+.about {
+  border: none;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  margin: 20px 0px 0px -30px;
+}
+
+.mobile-menu-items {
+  margin: 10px 20px;
+}
+
+/* icons in menu */
+.mobile-menu-items img {
+  margin: 0px 10px;
+}
+
 .subnav-content {
   display: flex;
   flex-direction: column;
+  color: hsl(0, 0%, 41%);
 }
 
-/* close menu slider */
-.close-menu-slider {
+/* links styles */
+.subnav-content a {
+  color: hsl(0, 0%, 8%);
+  text-decoration: none;
+}
+
+.login-and-register-buttons {
   display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.login {
+  font-family: "Epilogue";
+  font-size: 18px;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  border: none;
+  padding: 5px 10px;
+}
+
+.register {
+  font-family: "Epilogue";
+  font-size: 18px;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px 0px;
 }
 
 /* desktop style: OFF */

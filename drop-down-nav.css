@@ -7,14 +7,43 @@ body {
   margin: 0;
 }
 
+/* Snap Logo */
 .snap-logo {
   width: 24%;
 }
 
+/* MENU ICON */
 .menu-icon {
   width: 12%; /* fix width and height so adjusts to screen size*/
+  display: block;
 }
 
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+/* toggle class when clicking menu button */
+.menu-icon-disappear {
+  display: none;
+}
+
+/* click on menu button, opens */
+.open-mobile-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.subnav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* close menu slider */
+.close-menu-slider {
+  display: flex;
+}
+
+/* desktop style: OFF */
 .nav-bar-desktop {
   display: none;
 }
@@ -31,17 +60,20 @@ body {
   padding: 20px;
 }
 
+/**** Column Container with text & Images ****/
 .column-container {
   display: flex;
   flex-direction: column-reverse;
 }
 
+/* Header Text, Slogan, Learn More Btn, Sponsors */
 .left-column {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* header title */
 .header-title {
   font-size: xxx-large;
   overflow: hidden;
@@ -74,10 +106,8 @@ body {
   text-align: center;
 }
 
-.client-logos {
-}
-
-.right-column .mobile-hero-img {
+/* images */
+.mobile-hero-img {
   width: 100%;
 }
 
@@ -94,26 +124,24 @@ body {
   .right-nav-desktop {
     display: inline;
   }
-
+  /* hides nav bar in mobile view */
   .nav-bar-mobile {
     display: none;
   }
 
+  /* hover feature */
   .features-dropdown:hover,
   .company-dropdown:hover {
     cursor: pointer;
   }
 
-  .login:hover {
-    cursor: pointer;
-    color: black;
-  }
-
+  /* register button turns black */
   .register:hover {
     color: black;
     border: solid 1px black;
   }
 
+  /* register button static */
   .register {
     border: solid 2px black;
     padding: 10px;
@@ -126,43 +154,51 @@ body {
   }
 
   .left-column {
-    justify-content: center;
+    align-items: flex-start;
+    margin: 150px 175px;
+    width: 50%;
   }
 
-  .arrow-down-icon {
-    width: 40px;
-    height: 30px;
-  }
-
+  /* login button */
   .login {
     color: hsl(0, 0%, 41%);
   }
 
+  /* login button turns black font */
+  .login:hover {
+    cursor: pointer;
+    color: black;
+  }
+
+  /* register button */
   .register {
     color: hsl(0, 0%, 41%);
     border: solid 1px hsl(0, 0%, 41%);
   }
 
+  /* "make remote work" */
   .header-title {
-    font-size: xxx-large;
+    font-size: 90px;
+    overflow: hidden;
   }
 
+  /* lorem ipsum */
   .intro-slogan {
-    padding: 90px;
-    display: flex;
     align-content: center;
     text-align: left;
   }
 
+  /* pic of man holding laptop on top of page */
   .right-column .mobile-hero-img {
     display: none;
   }
 
+  /* pic of man holding laptop on right side of page */
   .desktop-hero-img {
     display: flex;
-    width: 100%;
   }
 
+  /* learn more button goes from grey to black */
   .learn-more-btn:hover {
     cursor: pointer;
     border: solid 1px black;

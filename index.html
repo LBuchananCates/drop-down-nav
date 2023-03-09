@@ -19,18 +19,69 @@
   </head>
   <body>
     <nav class="nav-bar-mobile">
-      <img src="./images/logo.svg" alt="snap-logo" />
-      <img src="./images/icon-menu.svg" alt="menu-icon" />
+      <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
+      <img src="./images/icon-menu.svg" alt="menu-icon" class="menu-icon" />
+
+      <div class="mobile-menu">
+        <img
+          src="./images/icon-close-menu.svg"
+          alt="close-menu-icon"
+          class="close-menu-icon"
+        />
+        <button class="mobile-menu-items features">Features</button>
+        <div class="subnav-content-1 open-mobile-menu">
+          <div class="mobile-menu-sub-items">
+            <img src="./images/icon-todo.svg" alt="notebook" /> To Do List
+          </div>
+          <div class="mobile-menu-sub-items">
+            <img src="./images/icon-calendar.svg" alt="calendar" /> Calendar
+          </div>
+          <div class="mobile-menu-sub-items">
+            <img src="./images/icon-reminders.svg" alt="bell" /> Reminders
+          </div>
+          <div class="mobile-menu-sub-items">
+            <img src="./images/icon-planning.svg" alt="timer" /> Planning
+          </div>
+        </div>
+        <button class="mobile-menu-items company">Company</button>
+        <div class="subnav-content-2">
+          <div class="mobile-menu-sub-items">History</div>
+          <div class="mobile-menu-sub-items">Our Team</div>
+          <div class="mobile-menu-sub-items">Blog</div>
+        </div>
+        <button class="mobile-menu-items">Careers</button>
+        <button class="mobile-menu-items">About</button>
+
+        <div class="login-and-register-buttons">
+          <button class="login">Login</button>
+          <button class="register">Register</button>
+        </div>
+      </div>
     </nav>
-    <img src="./images/logo.svg" alt="snap-logo" />
     <nav class="nav-bar-desktop">
+      <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
       <div class="left-nav-desktop">
-        <span class="features-dropdown">Features</span>
-        <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
-        <span class="company-dropdown">Company</span>
-        <img src="./images/icon-arrow-down.svg" alt="arrow-down" />
-        <span>Careers</span>
-        <span>About</span>
+        <div class="subnav">
+          <button class="features-dropdown">Features</button>
+          <div class="subnav-content">
+            <a href="#todo-list">ToDo List</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#reminders">Reminders</a>
+            <a href="#planning">Planning</a>
+          </div>
+        </div>
+
+        <div class="subnav">
+          <button class="company-dropdown">Company</button>
+          <div class="subnav-content">
+            <a href="#history">History</a>
+            <a href="#our-team">Our Team</a>
+            <a href="#blog">Blog</a>
+          </div>
+        </div>
+
+        <button>Careers</button>
+        <button>About</button>
       </div>
       <div class="right-nav-desktop">
         <span class="login">Login</span>
@@ -76,8 +127,14 @@
           src="./images/image-hero-mobile.png"
           alt="man-holding-laptop"
         />
+        <img
+          class="desktop-hero-img"
+          src="./images/image-hero-desktop.png"
+          alt="man-holding-laptop"
+        />
       </div>
     </div>
+
     <script src="drop-down-nav.js"></script>
   </body>
 </html>

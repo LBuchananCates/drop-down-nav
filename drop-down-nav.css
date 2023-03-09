@@ -32,6 +32,10 @@ body {
   right: 15px;
 }
 
+.close-menu-icon:hover {
+  cursor: pointer;
+}
+
 /* subnav contents styles */
 .features,
 .company {
@@ -73,6 +77,10 @@ body {
   margin: 17px 0px 20px 0px;
 }
 
+.mobile-menu-items:hover {
+  cursor: pointer;
+}
+
 /* features dropdown, company dropdown */
 .mobile-menu-sub-items {
   margin: 10px 20px;
@@ -83,11 +91,16 @@ body {
   margin: 0px 10px;
 }
 
-.subnav-content {
+.subnav-content-1,
+.subnav-content-2 {
   display: flex;
   flex-direction: column;
   color: hsl(0, 0%, 41%);
   margin-left: 15px;
+}
+
+.subnav-content-collapse {
+  display: none;
 }
 
 /* links styles */

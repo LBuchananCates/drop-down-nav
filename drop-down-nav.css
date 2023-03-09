@@ -13,7 +13,7 @@ body {
 }
 
 /* MENU ICON */
-.menu-icon {
+.menu-icon-open {
   position: absolute;
   right: 20px;
 }
@@ -22,23 +22,13 @@ body {
   cursor: pointer;
 }
 
-/* toggle class when clicking menu button */
-.menu-icon-disappear {
-  display: none;
-}
-
-/* close menu slider */
-.close-menu-slider {
-  display: flex;
-}
-
 /* upper right corner of open menu X */
 .close-menu-icon {
   position: absolute;
   right: 15px;
 }
 
-/* click on menu button, opens */
+/* click on features or company button, opens */
 .open-mobile-menu {
   display: flex;
   flex-direction: column;
@@ -53,11 +43,21 @@ body {
   position: absolute;
   right: -300px;
   padding: 25px;
-  transition: margin-right 0.65s;
+  transition: margin-right 0.5s;
+}
+
+.close-menu {
+  transition: margin-left 0.5s;
+  margin-right: -327px;
+  /* margin-right: 300px; */
+}
+
+.open-menu {
+  transition: margin-right 0.5s ease;
+  margin-right: 300px;
 }
 
 .mobile-menu:hover {
-  margin-right: 310px;
 }
 
 /* features, company, careers, about*/
@@ -77,7 +77,7 @@ body {
 }
 
 /* icons in menu */
-.mobile-menu-items img {
+.mobile-menu-sub-items img {
   margin: 0px 10px;
 }
 
@@ -191,18 +191,6 @@ body {
 
 .desktop-hero-img {
   display: none;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  background-color: blueviolet;
-  transition: background-color 0.5s 1s;
-}
-
-.circle:hover {
-  background-color: cyan;
-  border-radius: 50%;
 }
 
 @media screen and (min-width: 1440px) {

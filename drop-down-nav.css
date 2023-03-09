@@ -13,6 +13,10 @@ body {
 }
 
 /* MENU ICON */
+.menu-icon {
+  width: 10%;
+}
+
 .menu-icon-open {
   position: absolute;
   right: 20px;
@@ -22,19 +26,18 @@ body {
   cursor: pointer;
 }
 
-/* upper right corner of open menu X */
+/* CLOSE ICON X */
 .close-menu-icon {
   position: absolute;
   right: 15px;
 }
 
-/* click on features or company button, opens */
-.open-mobile-menu {
-  display: flex;
-  flex-direction: column;
+/* subnav contents styles */
+.features,
+.company {
 }
 
-/* entire container of menu */
+/* entire container of side menu */
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -46,18 +49,17 @@ body {
   transition: margin-right 0.5s;
 }
 
+/* closes menu nicely when click X close */
 .close-menu {
-  transition: margin-left 0.5s;
+  transition: 1s;
   margin-right: -327px;
   /* margin-right: 300px; */
 }
 
+/* opens menu when click hamburger */
 .open-menu {
   transition: margin-right 0.5s ease;
   margin-right: 300px;
-}
-
-.mobile-menu:hover {
 }
 
 /* features, company, careers, about*/

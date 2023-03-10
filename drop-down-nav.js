@@ -31,7 +31,7 @@ companyDropdown.addEventListener("click", function () {
 // DESKTOP
 // select features > contents
 const subnavContentFeatDesktop = document.querySelector(
-  ".hide-contents-desktop"
+  ".feature-contents-desktop"
 );
 
 // select features button
@@ -41,19 +41,19 @@ const featuresDropdownDesktop = document.querySelector(
 
 // click features button: opens menu
 featuresDropdownDesktop.addEventListener("click", function () {
-  subnavContentFeatDesktop.classList.toggle("feature-contents-desktop");
+  console.log("hewwo");
+  subnavContentFeatDesktop.classList.toggle("hide-contents-desktop");
 });
 
+//select company > contents
+const subnavContentCompDesktop = document.querySelector(
+  ".company-contents-desktop"
+);
 // select company button
 const companyDropdownDesktop = document.querySelector(
   ".company-dropdown-desktop"
 );
 
-//select company > contents
-const subnavContentCompDesktop = document.querySelector(
-  ".hide-contents-desktop"
-);
-
 companyDropdownDesktop.addEventListener("click", function () {
-  subnavContentCompDesktop.classList.toggle("company-contents-desktop");
+  subnavContentCompDesktop.classList.toggle("hide-contents-desktop");
 });

@@ -49,6 +49,7 @@ featuresDropdownDesktop.addEventListener("click", function () {
 const subnavContentCompDesktop = document.querySelector(
   ".company-contents-desktop"
 );
+
 // select company button
 const companyDropdownDesktop = document.querySelector(
   ".company-dropdown-desktop"

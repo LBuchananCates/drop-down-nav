@@ -42,8 +42,8 @@ body {
   flex-direction: column;
   color: hsl(0, 0%, 41%);
   background-color: white;
-  position: absolute;
-  right: -300px;
+  position: fixed;
+  right: -327px;
   padding: 25px;
   transition: margin-right 0.5s;
 }
@@ -51,13 +51,13 @@ body {
 /* closes menu nicely when click X close */
 .close-menu {
   transition: 1s;
-  margin-right: -327px;
+  margin-right: -27px;
 }
 
 /* opens menu when click hamburger */
 .open-menu {
   transition: margin-right 0.5s ease;
-  margin-right: 300px;
+  margin-right: 327px;
   height: 100%;
 }
 

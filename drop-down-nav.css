@@ -138,6 +138,7 @@ body {
 .left-nav-desktop {
   display: flex;
   flex-direction: row;
+  margin-top: 15px;
 }
 
 .nav-bar-mobile {
@@ -207,8 +208,9 @@ body {
 @media screen and (min-width: 1440px) {
   /* snap logo */
   .snap-logo {
-    width: 13vw;
-    margin: 50px;
+    width: 150px;
+    height: 50px;
+    margin: 10px 50px;
   }
 
   .desktop-nav-span {
@@ -220,12 +222,23 @@ body {
     display: inline-flex;
     color: hsl(0, 0%, 41%);
     justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
   }
 
   /* login & register nav bar */
   .right-nav-desktop {
     /* display: flex; */
     height: fit-content;
+    margin: 0px 50px;
+  }
+
+  .left-nav-desktop {
+    align-items: flex-start;
+  }
+
+  .left-nav-desktop .subnav {
+    padding: 0px 15px;
   }
 
   /* hides nav bar in mobile view */
@@ -238,8 +251,8 @@ body {
     background-color: white;
     color: hsl(0, 0%, 41%);
     font-family: "Epilogue", sans-serif;
-    font-size: 18px;
-    margin: 17px 0px 20px 0px;
+    font-size: 22px;
+    margin: 17px 10px 20px 0px;
   }
 
   .desktop-menu-items:hover {
@@ -248,6 +261,7 @@ body {
 
   .desktop-menu-sub-items {
     margin: 9px 15px;
+    font-size: 22px;
   }
 
   /* desktop icons */
@@ -255,10 +269,23 @@ body {
     margin: 0px 10px;
   }
 
-  .feature-contents-desktop,
+  .feature-contents-desktop {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px -10px hsl(0deg 0% 41%);
+    padding: 30px 10px;
+    position: absolute;
+    margin: 0px -80px;
+  }
+
   .company-contents-desktop {
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px -10px hsl(0deg 0% 41%);
+    padding: 30px 10px;
+    position: absolute;
   }
 
   /* hover feature */
@@ -274,14 +301,16 @@ body {
   /* register button turns black */
   .register:hover {
     color: black;
-    border: solid 1px black;
+    border: solid 2px black;
   }
 
   /* register button static */
   .register {
-    border: solid 2px black;
-    padding: 10px;
-    border-radius: 10px;
+    border: solid 2px hsl(0, 0%, 41%);
+    padding: 20px 30px;
+    border-radius: 20px;
+    color: hsl(0, 0%, 41%);
+    font-size: 22px;
   }
 
   .column-container {
@@ -291,13 +320,15 @@ body {
 
   .left-column {
     align-items: flex-start;
-    margin: 150px 175px;
+    margin: 215px 175px;
     width: 50%;
   }
 
   /* login button */
   .login {
     color: hsl(0, 0%, 41%);
+    font-size: 22px;
+    margin: 0px 40px;
   }
 
   /* login button turns black font */
@@ -306,22 +337,19 @@ body {
     color: black;
   }
 
-  /* register button */
-  .register {
-    color: hsl(0, 0%, 41%);
-    border: solid 1px hsl(0, 0%, 41%);
-  }
-
   /* "make remote work" */
   .header-title {
-    font-size: 90px;
+    font-size: 100px;
     overflow: hidden;
+    text-align: left;
   }
 
   /* lorem ipsum */
   .intro-slogan {
     align-content: center;
     text-align: left;
+    font-size: 22px;
+    padding: 20px 0px;
   }
 
   /* pic of man holding laptop on top of page */
@@ -332,6 +360,8 @@ body {
   /* pic of man holding laptop on right side of page */
   .desktop-hero-img {
     display: flex;
+    width: 100%;
+    margin-top: 130px;
   }
 
   /* learn more button goes from grey to black */
@@ -340,5 +370,13 @@ body {
     border: solid 1px black;
     background-color: white;
     color: black;
+  }
+
+  .clients {
+    padding: 125px 0px;
+  }
+
+  .client-logos {
+    width: 20%;
   }
 }

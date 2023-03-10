@@ -14,26 +14,38 @@ closeMenuBtn.addEventListener("click", function () {
   mobileMenu.classList.remove("open-menu");
 });
 
-// const subnavContent = document.querySelectorAll("subnav-content");
-// let i;
-
-// for (let i = 0; i < subnavContent.length; i++) {
-//   subnavContent[i].addEventListener("click", function () {
-//     this.classList.toggle("subnav-content-collapse");
-//   });
-// }
-
 // when click/toggle Features, subnav-content display: flex or none
 const featuresDropdown = document.querySelector(".features");
-const subnavContentFeat = document.querySelector(".subnav-content-1");
-
+const subnavContentFeat = document.querySelector(".subnav-content-feat");
 featuresDropdown.addEventListener("click", function () {
   subnavContentFeat.classList.toggle("subnav-content-collapse");
 });
 
 // when click/toggle Company, subnav-content display: flex or none
 const companyDropdown = document.querySelector(".company");
-const subnavContentComp = document.querySelector(".subnav-content-2");
+const subnavContentComp = document.querySelector(".subnav-content-company");
 companyDropdown.addEventListener("click", function () {
   subnavContentComp.classList.toggle("subnav-content-collapse");
+});
+
+// DESKTOP
+const subnavContentFeatDesktop = document.querySelector(
+  ".feature-contents-desktop"
+);
+const featuresDropdownDesktop = document.querySelector(
+  ".features-dropdown-desktop"
+);
+
+featuresDropdownDesktop.addEventListener("click", function () {
+  subnavContentFeatDesktop.classList.toggle("hide-contents-desktop");
+});
+
+const companyDropdownDesktop = document.querySelector(
+  ".company-dropdown-desktop"
+);
+const subnavContentCompDesktop = document.querySelector(
+  ".company-contents-desktop"
+);
+companyDropdownDesktop.addEventListener("click", function () {
+  subnavContentCompDesktop.classList.toggle("hide-contents-desktop");
 });

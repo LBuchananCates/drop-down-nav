@@ -36,11 +36,6 @@ body {
   cursor: pointer;
 }
 
-/* subnav contents styles */
-.features,
-.company {
-}
-
 /* entire container of side menu */
 .mobile-menu {
   display: flex;
@@ -57,13 +52,13 @@ body {
 .close-menu {
   transition: 1s;
   margin-right: -327px;
-  /* margin-right: 300px; */
 }
 
 /* opens menu when click hamburger */
 .open-menu {
   transition: margin-right 0.5s ease;
   margin-right: 300px;
+  height: 100%;
 }
 
 /* features, company, careers, about*/
@@ -91,8 +86,8 @@ body {
   margin: 0px 10px;
 }
 
-.subnav-content-1,
-.subnav-content-2 {
+.subnav-content-feat,
+.subnav-content-company {
   display: flex;
   flex-direction: column;
   color: hsl(0, 0%, 41%);
@@ -195,6 +190,7 @@ body {
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
+  align-items: center;
   padding: 50px 0px;
   text-align: center;
 }
@@ -209,23 +205,70 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+  /* snap logo */
+  .snap-logo {
+    width: 13vw;
+    margin: 50px;
+  }
+
+  .desktop-nav-span {
+    display: flex;
+  }
+
+  /* ENTIRE navigation bar: desktop */
   .nav-bar-desktop {
     display: inline-flex;
     color: hsl(0, 0%, 41%);
+    justify-content: space-between;
   }
 
+  /* login & register nav bar */
   .right-nav-desktop {
-    display: inline;
+    /* display: flex; */
+    height: fit-content;
   }
+
   /* hides nav bar in mobile view */
   .nav-bar-mobile {
     display: none;
   }
 
+  .desktop-menu-items {
+    border: none;
+    background-color: white;
+    color: hsl(0, 0%, 41%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 18px;
+    margin: 17px 0px 20px 0px;
+  }
+
+  .desktop-menu-items:hover {
+    color: black;
+  }
+
+  .desktop-menu-sub-items {
+    margin: 9px 15px;
+  }
+
+  /* desktop icons */
+  .desktop-menu-sub-items img {
+    margin: 0px 10px;
+  }
+
+  .feature-contents-desktop,
+  .company-contents-desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* hover feature */
-  .features-dropdown:hover,
-  .company-dropdown:hover {
+  .features-dropdown-desktop:hover,
+  .company-dropdown-desktop:hover {
     cursor: pointer;
+  }
+
+  .hide-contents-desktop {
+    display: none;
   }
 
   /* register button turns black */

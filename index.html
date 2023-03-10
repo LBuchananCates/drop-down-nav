@@ -18,6 +18,7 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
+    <!-- MOBILE NAV -->
     <nav class="nav-bar-mobile">
       <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
       <img src="./images/icon-menu.svg" alt="menu-icon" class="menu-icon" />
@@ -29,7 +30,7 @@
           class="close-menu-icon"
         />
         <button class="mobile-menu-items features">Features</button>
-        <div class="subnav-content-1 open-mobile-menu">
+        <div class="subnav-content-feat open-mobile-menu">
           <div class="mobile-menu-sub-items">
             <img src="./images/icon-todo.svg" alt="notebook" /> To Do List
           </div>
@@ -44,7 +45,7 @@
           </div>
         </div>
         <button class="mobile-menu-items company">Company</button>
-        <div class="subnav-content-2">
+        <div class="subnav-content-company">
           <div class="mobile-menu-sub-items">History</div>
           <div class="mobile-menu-sub-items">Our Team</div>
           <div class="mobile-menu-sub-items">Blog</div>
@@ -58,34 +59,48 @@
         </div>
       </div>
     </nav>
+
+    <!-- DESKTOP NAV -->
     <nav class="nav-bar-desktop">
-      <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
       <div class="left-nav-desktop">
+        <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
         <div class="subnav">
-          <button class="features-dropdown">Features</button>
-          <div class="subnav-content">
-            <a href="#todo-list">ToDo List</a>
-            <a href="#calendar">Calendar</a>
-            <a href="#reminders">Reminders</a>
-            <a href="#planning">Planning</a>
+          <button class="desktop-menu-items features-dropdown-desktop">
+            Features
+          </button>
+          <div class="feature-contents-desktop">
+            <div class="desktop-menu-sub-items">
+              <img src="./images/icon-todo.svg" alt="notebook" />To Do List
+            </div>
+            <div class="desktop-menu-sub-items">
+              <img src="./images/icon-calendar.svg" alt="calendar" />Calendar
+            </div>
+            <div class="desktop-menu-sub-items">
+              <img src="./images/icon-reminders.svg" alt="bell" />Reminders
+            </div>
+            <div class="desktop-menu-sub-items">
+              <img src="./images/icon-planning.svg" alt="timer" />Planning
+            </div>
           </div>
         </div>
 
         <div class="subnav">
-          <button class="company-dropdown">Company</button>
-          <div class="subnav-content">
-            <a href="#history">History</a>
-            <a href="#our-team">Our Team</a>
-            <a href="#blog">Blog</a>
+          <button class="desktop-menu-items company-dropdown-desktop">
+            Company
+          </button>
+          <div class="company-contents-desktop">
+            <div class="desktop-menu-sub-items">History</div>
+            <div class="desktop-menu-sub-items">Our Team</div>
+            <div class="desktop-menu-sub-items">Blog</div>
           </div>
         </div>
 
-        <button>Careers</button>
-        <button>About</button>
+        <button class="desktop-menu-items">Careers</button>
+        <button class="desktop-menu-items">About</button>
       </div>
       <div class="right-nav-desktop">
-        <span class="login">Login</span>
-        <span class="register">Register</span>
+        <button class="login">Login</button>
+        <button class="register">Register</button>
       </div>
     </nav>
 
@@ -121,6 +136,7 @@
         </div>
       </div>
 
+      <!-- IMAGE OF DUDE & LAPTOP -->
       <div class="right-column">
         <img
           class="mobile-hero-img"

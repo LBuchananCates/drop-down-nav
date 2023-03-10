@@ -29,23 +29,31 @@ companyDropdown.addEventListener("click", function () {
 });
 
 // DESKTOP
+// select features > contents
 const subnavContentFeatDesktop = document.querySelector(
-  ".feature-contents-desktop"
+  ".hide-contents-desktop"
 );
+
+// select features button
 const featuresDropdownDesktop = document.querySelector(
   ".features-dropdown-desktop"
 );
 
+// click features button: opens menu
 featuresDropdownDesktop.addEventListener("click", function () {
-  subnavContentFeatDesktop.classList.toggle("hide-contents-desktop");
+  subnavContentFeatDesktop.classList.toggle("feature-contents-desktop");
 });
 
+// select company button
 const companyDropdownDesktop = document.querySelector(
   ".company-dropdown-desktop"
 );
+
+//select company > contents
 const subnavContentCompDesktop = document.querySelector(
-  ".company-contents-desktop"
+  ".hide-contents-desktop"
 );
+
 companyDropdownDesktop.addEventListener("click", function () {
-  subnavContentCompDesktop.classList.toggle("hide-contents-desktop");
+  subnavContentCompDesktop.classList.toggle("company-contents-desktop");
 });

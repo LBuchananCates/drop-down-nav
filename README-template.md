@@ -1,7 +1,5 @@
 # Frontend Mentor - Intro section with dropdown navigation solution
 
-This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 Click here to view demo! https://leafy-bubblegum-b4b302.netlify.app/
 
 ## Table of contents
@@ -16,9 +14,6 @@ Click here to view demo! https://leafy-bubblegum-b4b302.netlify.app/
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,83 +27,120 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img width="582" alt="Screen Shot 2023-08-10 at 12 47 26 PM" src="https://github.com/LBuchananCates/drop-down-nav/assets/100169368/fee04776-4337-4f40-beae-33d731a3d99d">
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://leafy-bubblegum-b4b302.netlify.app/
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS custom properties based on whether they were "open" or "close"
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- toggle features for dropdown menus on desktop and menu when interacting with navigation links
 
-To see how you can add code snippets, see below:
+My Code Snippets
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+- nav bars are still somewhat of a challenge because the menu items do not always look identical in mobile and desktop view
+- making sure they work correctly when applying CSS classes is a challenge because organization and clear-to-understand names are crucial; in previous coding projects of mine, I had to delete all of my code and start from the beginning because my class names were not clear or followed a consistent pattern
+
+ <!-- MOBILE NAV -->
+      <nav class="nav-bar-mobile">
+        <img src="./images/logo.svg" alt="snap-logo" class="snap-logo" />
+        <img src="./images/icon-menu.svg" alt="menu-icon" class="menu-icon" />
+
+        <div class="mobile-menu">
+          <img
+            src="./images/icon-close-menu.svg"
+            alt="close-menu-icon"
+            class="close-menu-icon"
+          />
+          <button class="mobile-menu-items features">Features</button>
+          <div class="subnav-content-feat open-mobile-menu">
+            <div class="mobile-menu-sub-items">
+              <img src="./images/icon-todo.svg" alt="notebook" /> To Do List
+            </div>
+            <div class="mobile-menu-sub-items">
+              <img src="./images/icon-calendar.svg" alt="calendar" /> Calendar
+            </div>
+            <div class="mobile-menu-sub-items">
+              <img src="./images/icon-reminders.svg" alt="bell" /> Reminders
+            </div>
+            <div class="mobile-menu-sub-items">
+              <img src="./images/icon-planning.svg" alt="timer" /> Planning
+            </div>
+          </div>
+          <button class="mobile-menu-items company">Company</button>
+          <div class="subnav-content-company">
+            <div class="mobile-menu-sub-items">History</div>
+            <div class="mobile-menu-sub-items">Our Team</div>
+            <div class="mobile-menu-sub-items">Blog</div>
+          </div>
+          <button class="mobile-menu-items">Careers</button>
+          <button class="mobile-menu-items">About</button>
+
+          <div class="login-and-register-buttons">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+          </div>
+        </div>
+      </nav>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+/* entire container of side menu */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 41%);
+  background-color: white;
+  position: fixed;
+  right: -327px;
+  padding: 25px;
+  transition: margin-right 0.5s;
+}
+
+/* closes menu nicely when click X close */
+.close-menu {
+  transition: 1s;
+  margin-right: -27px;
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+- This was one of my first projects where I had to create a mobile hamburger menu and a regular desktop menu (depending on screen sizes); this was a challenge because my html needed to contain class names for both mobile and desktop because the appearance would be different
+- proud of the toggle feature for the 'features' and 'company' drop downs in mobile
+// when click/toggle Features, subnav-content display: flex or none
+const featuresDropdown = document.querySelector(".features");
+const subnavContentFeat = document.querySelector(".subnav-content-feat");
+featuresDropdown.addEventListener("click", function () {
+  subnavContentFeat.classList.toggle("subnav-content-collapse");
+});
+
+// when click/toggle Company, subnav-content display: flex or none
+const companyDropdown = document.querySelector(".company");
+const subnavContentComp = document.querySelector(".subnav-content-company");
+companyDropdown.addEventListener("click", function () {
+  subnavContentComp.classList.toggle("subnav-content-collapse");
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- still working on improving how long it takes me to code the projects, depending on how structured my class names are; learned about the BEM CSS class naming 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ <-- this has been tremendously helpful for understanding flexbox in a visual way
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - https://leafy-bubblegum-b4b302.netlify.app/
+- Frontend Mentor - [@LBuchananCates](https://www.frontendmentor.io/profile/lbuchanancates)
